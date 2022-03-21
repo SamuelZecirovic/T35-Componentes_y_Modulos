@@ -1,0 +1,38 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
+
+<div class="p-5">
+  <h2>Alta Cliente</h2>
+  <div class="w-25 my-5">
+    <div class="w-50 my-2 d-flex flex-row justify-content-between">
+      <label for="nombre">Nombre: </label>
+      <input class="ms-2" type="text" [(ngModel)]="nombre">
+     <label class="ms-2" for="cif">CIF: </label>
+      <input class="ms-2" type="text" [(ngModel)]="cif">
+    </div>
+    <div class="w-50 my-2 d-flex flex-row justify-content-between">
+      <label for="direccion">Dirección: </label>
+      <input class="ms-2" type="text" [(ngModel)]="direccion">
+    </div>
+    <div class="w-50 my-2 d-flex flex-row justify-content-between">
+      <label for="grupo">Grupo: </label>
+      <select class="ms-2" [(ngModel)]="grupo">
+        <option value="Sin definir">Sin definir</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+    <button (click)="guardar()" class="btn btn-secondary mt-3">Guardar</button>
+  </div>
+  <app-altacliente [datos]="registros"></app-altacliente>
+</div>
